@@ -26,6 +26,10 @@ async function activateXR() {
     cube.position.set(1, 1, 1);
     scene.add(cube);
 
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.3);
+    directionalLight.position.set(10, 15, 10);
+    scene.add(directionalLight);
+
     // Set up the WebGLRenderer, which handles rendering to the session's base layer.
     const renderer = new THREE.WebGLRenderer({
         alpha: true,
